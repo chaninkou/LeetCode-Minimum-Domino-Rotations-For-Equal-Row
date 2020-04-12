@@ -2,10 +2,13 @@ package leetcode1007;
 
 public class FindMinSwapToEqualRowFunction {
 	// Brute force way to do it, but its fast
+	// O(6 * n) = o(n) time
     public int minDominoRotations(int[] A, int[] B) {
         int min = Integer.MAX_VALUE;
         
+        // Since a domino is only 1-6
         for(int i = 1; i <= 6; i++){
+        	// Find the min for both since we don't know which array is better to pick
             min = Math.min(min, checking(A, B, i));
             min = Math.min(min, checking(B, A, i));
         }
@@ -34,6 +37,7 @@ public class FindMinSwapToEqualRowFunction {
     }
     
     // Checking if A or B elements are the same using the first element
+    // O(n + n) which is just O(n)
     public int minDominoRotations2(int[] A, int[] B) {
         int n = A.length;
         
@@ -48,6 +52,7 @@ public class FindMinSwapToEqualRowFunction {
                 b++;
             }
             
+            // If i got til the end, just return the min of it
             if(i == n - 1){
                 return Math.min(a,b);
             }
@@ -71,6 +76,7 @@ public class FindMinSwapToEqualRowFunction {
         return -1;
     }
     
+    // O(n * 6) = O(n) time, need extra memory to store two arrays to keep track
     public int minDominoRotations3(int[] A, int[] B) {
         int[] countA = new int[7];
         int[] countB = new int[7];
