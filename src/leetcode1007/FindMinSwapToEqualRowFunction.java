@@ -76,7 +76,7 @@ public class FindMinSwapToEqualRowFunction {
         return -1;
     }
     
-    // O(n * 6) = O(n) time, need extra memory to store two arrays to keep track
+    // O(n * 6) = O(n) time, need extra memory to store two arrays
     public int minDominoRotations3(int[] A, int[] B) {
         int[] countA = new int[7];
         int[] countB = new int[7];
