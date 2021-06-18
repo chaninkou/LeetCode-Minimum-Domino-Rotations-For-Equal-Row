@@ -8,7 +8,7 @@ public class FindMinSwapToEqualRowFunction {
         
         // Since a domino is only 1-6
         for(int i = 1; i <= 6; i++){
-        	// Find the min for both since we don't know which array is better to pick
+        	// Find the min for both to know which array to pick.
             min = Math.min(min, checking(A, B, i));
             min = Math.min(min, checking(B, A, i));
         }
