@@ -52,7 +52,7 @@ public class FindMinSwapToEqualRowFunction {
                 b++;
             }
             
-            // If i got til the end, just return the min of it
+            // If i got till the end, just return the min of it
             if(i == n - 1){
                 return Math.min(a,b);
             }
