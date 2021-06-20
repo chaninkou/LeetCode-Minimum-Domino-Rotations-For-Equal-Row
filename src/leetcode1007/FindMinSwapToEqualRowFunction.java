@@ -90,7 +90,7 @@ public class FindMinSwapToEqualRowFunction {
             countA[A[i]]++;
             countB[B[i]]++;
             
-            // Count how many times its at the same position
+            // Count how many times it occur at the same position
             if(A[i] == B[i]){
                 samePosition++;
             }
